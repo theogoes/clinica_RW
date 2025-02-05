@@ -10,6 +10,6 @@ b.addEventListener("click",()=>{
     
     setTimeout(()=> { 
         let check = localStorage.getItem("valor")
-        check == null? window.location.assign("http://127.0.0.1:5000/cadastro"): window.location.assign("http://127.0.0.1:5000/simulacao") }
+        check == null? window.location.assign("https://psybudget.up.railway.app/cadastro"): window.location.assign("https://psybudget.up.railway.app/simulacao") }
         ,600)
 })
