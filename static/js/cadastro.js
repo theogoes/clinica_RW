@@ -4,11 +4,11 @@ const site = document.getElementById("input_site")
 const local = document.getElementById("input_local")
 const alor = document.getElementById("input_valor")
 const b_cad = document.getElementById("Simular")
-let informacoes = JSON.parse(localStorage.getItem('infos')) || []
+let itens = JSON.parse(localStorage.getItem('inf')) || [];
+
 
 
 b_cad.addEventListener("click",()=>{
-    
     let imobiliaria = im.value
     let salas = qtd.value
     let link =  site.value
@@ -16,15 +16,21 @@ b_cad.addEventListener("click",()=>{
     let valor = alor.value
     const infos = {imobiliaria, salas, link, loc, valor}
     const json_s = JSON.stringify(infos)
-    informacoes.push(json_s)
-    saveLocal(informacoes)
+    itens.push(json_s)
+    saveLocal(itens)
+    saveDB(json_s)
 })
 
 function saveLocal(info){
-    localStorage.setItem("infos",info)
+    localStorage.setItem("inf",info)
 }
 
 function saveDB(info){
-    
-    console.log(json_s)
+    $.ajax({
+        url:"/simulacao",
+        type:"POST",
+        contentType:"aplication/json",
+        data: JSON.stringify(info)
+    })
+    console.log(info)
 }
