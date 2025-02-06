@@ -12,6 +12,6 @@ async def insertInfos(data):
     collection = db["infos"]
     print("conectado com a coleção: ",collection)
     print("tentando inserir os dados...")
-    resp = await collection.insert_one(data)
+    resp = collection.insert_one(data)
     return resp
     
