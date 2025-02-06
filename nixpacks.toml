@@ -2,3 +2,4 @@
 
 [start]
 cmd = "gunicorn main:app"
+cmd = "npm install ajax"
