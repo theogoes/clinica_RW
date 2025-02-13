@@ -3,6 +3,19 @@
     padding: 0;
     font-family: sans-serif;
 }
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+input:focus{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0;
+    outline: 0;
+}
+  
 body{
     width: 100vw;
     height: 100vh;
@@ -73,7 +86,7 @@ body{
 .opt_container{
     height: 70%;
     width: 6%;
-    background-color: none;
+
     margin-right: 50px;
 
     p{
@@ -147,4 +160,79 @@ body{
 #sim{
     height: 30%;
     color: #9F4FA6;
+}
+#cad_main{
+    background-color:#D0ABDA ;
+}
+#cad_text_area{
+    height: 70%;
+    p{
+        color: #FFFFFF;
+        font-size: 70px;
+        animation: fadein 2s ;
+        margin-top: 8%;
+    }
+}
+#cad_input{
+    display: inline-flex;
+    height: 30%;
+    animation: fadein 3s;
+        input{
+            margin-left: 10px;
+            height: 50px;
+            font-size: 40px;
+            background-color: transparent;
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            border-color:#9F4FA6;
+        }
+        button{
+            height: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #9F4FA6;
+            background-color: transparent;
+            border: none;
+            margin-left: 30px;
+        }
+        button:hover{
+            
+            cursor: pointer;
+        }
+}
+
+#cad_i.valid{
+    border-color: #9F4FA6;
+}
+#cad_i.invalid{
+    border-color: red;
+}
+#cad_text.off{
+    opacity: 0;
+    animation: fadeout 1s ;
+}
+#cad_i.off{
+    opacity: 0;
+    animation: fadeout 1s ;
+}
+#cad_b.off{
+    opacity: 0;
+    animation: fadeout 1s ;
+}
+#cad_text.on{
+    opacity: 1;
+    animation: fadein 1s ;
+}
+
+
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes fadeout{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
 }

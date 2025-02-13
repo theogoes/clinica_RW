@@ -1,5 +1,5 @@
 # nixpacks.toml
-providers = ["python","node"]
+providers = ["python"]
 
 [start]
 cmd = "gunicorn main:app"
