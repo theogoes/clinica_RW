@@ -165,7 +165,7 @@ body{
     background-color:#D0ABDA ;
 }
 #cad_text_area{
-    height: 70%;
+    height: 60%;
     p{
         color: #FFFFFF;
         font-size: 70px;
@@ -203,7 +203,10 @@ body{
             cursor: pointer;
         }
 }
-
+#cad_i::placeholder{
+    font-size: 1rem;
+    color: #b97abe;
+}
 #cad_i.valid{
     border-color: #9F4FA6;
 }
@@ -225,6 +228,27 @@ body{
 #cad_text.on{
     opacity: 1;
     animation: fadein 1s ;
+}
+#cad_i.on{
+    opacity: 1;
+    animation: fadein 1s ;
+}
+#cad_b.on{
+    opacity: 1;
+    animation: fadein 1s ;
+}
+#pg{
+    height: 5%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 10%;
+    width: 98%;
+    p{
+        height: auto;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
 }
 
 
