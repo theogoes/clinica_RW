@@ -87,8 +87,8 @@ function registrationStep(){
     cadText.classList.remove("on")
     cadText.classList.add("off")
     setTimeout(()=>{
-        window.location.replace("http://127.0.0.1:5000/simulacao")
-        //window.location.assign("https://psybudget.up.railway.app/simulacao")
+        //window.location.replace("http://127.0.0.1:5000/simulacao")
+        window.location.assign("https://psybudget.up.railway.app/simulacao")
     },1000)
 }
 function saveLocal(info){
