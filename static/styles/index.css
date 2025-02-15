@@ -55,6 +55,7 @@ body{
         transition: 0.5s;
     }
 }
+
 #index_circle:hover{
     cursor: pointer;
     width: 510px;
@@ -162,10 +163,12 @@ body{
     color: #9F4FA6;
 }
 #cad_main{
+    flex-direction: column;
     background-color:#D0ABDA ;
 }
 #cad_text_area{
     height: 60%;
+    width: 80%;
     p{
         color: #FFFFFF;
         font-size: 70px;
@@ -213,6 +216,9 @@ body{
 #cad_i.invalid{
     border-color: red;
 }
+#cad_i.disable{
+    display: none;
+}
 #cad_text.off{
     opacity: 0;
     animation: fadeout 1s ;
@@ -259,4 +265,26 @@ body{
 @keyframes fadeout{
     0%{opacity: 1;}
     100%{opacity: 0;}
+}
+
+@media (max-width: 450px) {
+    #index_circle{
+        width: 300px;
+        height: 300px;
+    }
+    #index_circle:hover{
+        width: 310px;
+        height: 310px;
+        P{
+            font-size: 75px;
+        }
+    }
+    #cad_i{
+        width: 80%;
+        height: 25%;
+    }
+    #cad_b{
+        width: 20%;
+        height: 25%;
+    }
 }
