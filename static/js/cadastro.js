@@ -17,8 +17,8 @@ const cadFrontTexts = ["",
 const fields = ["imobiliaria", "local","salas", "valor","link"]
 
 //Texto a serem apresentados no input, auxiliando o usuario no seu preenchimento
-const placeHolderTxt = [
-    "",
+const placeHolderTxt = ["",
+    "Insira aqui o nome da imobiliaria",
     "Insira o bairro do imovel",
     "Insira a quantiedade de salas do imovel",
     "Insira o custo mensa (aluguel, pacela, etc..)",
@@ -55,9 +55,11 @@ function validationStep(){
     if(currentStep === 1){
         setTimeout(()=>{toggleClass(cadInput,"off","on")},1000)
         textChangeAnimation(cadFrontTexts[currentStep])
-        cadStep.textContent = `${(currentStep)+1}/${fields.length}`
+        cadStep.textContent = `${(currentStep)}/${fields.length + 1}`
         return
     }
+    console.log(cadFrontTexts.length+"/"+currentStep)
+
     const inputValue = cadInput.value 
     const validationCod  = validation(inputValue, currentStep)
 
@@ -71,10 +73,12 @@ function validationStep(){
 
     infos[fields[currentStep - 2]] = inputValue
     textChangeAnimation(cadFrontTexts[currentStep])
-    cadStep.textContent = `${(currentStep)}/${fields.length}`
-    if(currentStep === cadFrontTexts.length){
-        toggleClass(cadInput,"on","disable")
-        cadButtom.textContent = "Cadastrar"}
+    cadStep.textContent = `${(currentStep)}/${fields.length + 1}`
+
+    if(currentStep === cadFrontTexts.length - 1){
+        setTimeout(() =>{toggleClass(cadInput,"on","disable")
+        cadButtom.textContent = "Cadastrar"},1000)
+    }
 }
 
 function registrationStep(){
@@ -87,8 +91,8 @@ function registrationStep(){
     cadText.classList.remove("on")
     cadText.classList.add("off")
     setTimeout(()=>{
-        //window.location.replace("http://127.0.0.1:5000/simulacao")
-        window.location.assign("https://psybudget.up.railway.app/simulacao")
+        window.location.replace("http://127.0.0.1:5000/simulacao")
+        //window.location.assign("https://psybudget.up.railway.app/simulacao")
     },1000)
 }
 function saveLocal(info){
