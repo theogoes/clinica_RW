@@ -260,7 +260,7 @@ body{
 #simulacao_container{
     height: 80%;
     overflow: hidden;
-    background-color: aliceblue;
+    background-color: transparent;
     display: inline-flex;
     align-items: center;
     position: relative;
@@ -273,7 +273,7 @@ body{
     border-radius: 30px;
     margin-right: 30px;
     position: relative;
-    transition: 0.5s ease-in;
+    transition: 1s ease-in-out;
 }
 .simulacao_content.notOnFocus{
     height: 80%;
@@ -281,15 +281,6 @@ body{
 }
 .simulacao_content.notOnFocus:hover{
     cursor: pointer;
-}
-.gosth{
-    background-color: transparent;    
-    height: 100%;
-    min-width: 80%;
-    border-radius: 30px;
-    margin-right: 30px;
-    position: relative;
-    transition: 0.5;
 }
 
 

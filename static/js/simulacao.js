@@ -2,6 +2,8 @@
 document.body.onload = buildFront
 var index = 0
 const moveAmout = window.screen.width
+var moved = 0
+
 
 function buildFront(){
     buildSimulations()
@@ -45,7 +47,7 @@ function dinaFocus(index){
 function moveItens(amount){
     const divsCards = document.querySelectorAll(".simulacao_content")
     divsCards.forEach(div =>{
-        console.log(index+"/"+amount)
+        console.log(index+"/"+div.style.transform)
         div.style.transform = `translateX(${amount}px)`
     })
 }
