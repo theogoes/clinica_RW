@@ -1,13 +1,13 @@
 
 document.body.onload = buildFront
 var index = 0
-const moveAmout = window.screen.width
+const moveAmout = window.screen.width/1.95
 var moved = 0
 
 
 function buildFront(){
     buildSimulations()
-   nextSimulation(moveAmout/2) 
+   nextSimulation(moveAmout) 
    dinaFocus(index)
     
 }
@@ -47,21 +47,25 @@ function dinaFocus(index){
 function moveItens(amount){
     const divsCards = document.querySelectorAll(".simulacao_content")
     divsCards.forEach(div =>{
-        console.log(index+"/"+div.style.transform)
         div.style.transform = `translateX(${amount}px)`
     })
 }
 
 function nextSimulation(move){
     index++
+    moved = move + moved
     dinaFocus(index)
-    moveItens(-move * index)
+    moveItens(-moved)
     
 }
 function previousSimulation(move){
     index--
     dinaFocus(index)
-    index === 0 ? moveItens(move/4):moveItens(-move/index)
+
+    moved = moved - move
+    moveItens(-moved)
+    console.log(-moved)
+    //index === 0 ? moveItens(move/4):moveItens(-move/index)
 
 }
 
@@ -71,7 +75,6 @@ document.addEventListener("click",function(event){
     
     let divFocus = event.target.id.split("_")[1]
     if(!isNaN(divFocus)){
-        const movement = moveAmout/1.8
-        divFocus < index? previousSimulation(movement) :nextSimulation(movement)
+        divFocus < index? previousSimulation(moveAmout + 187.9) :nextSimulation(moveAmout + 187.9)
     }
 })
