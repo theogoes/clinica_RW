@@ -1,11 +1,12 @@
 
 document.body.onload = buildFront
 var index = 0
-const moveAmout = window.screen.width/1.95
+const moveAmout = window.screen.width/2
 var moved = 0
 
 
 function buildFront(){
+    console.log(window.screen.width)
     buildSimulations()
    nextSimulation(moveAmout) 
    dinaFocus(index)
@@ -61,10 +62,9 @@ function nextSimulation(move){
 function previousSimulation(move){
     index--
     dinaFocus(index)
-
-    moved = moved - move
-    moveItens(-moved)
-    console.log(-moved)
+    moved = -moved + move
+    moveItens(moved)
+    console.log(moved)
     //index === 0 ? moveItens(move/4):moveItens(-move/index)
 
 }
@@ -75,6 +75,6 @@ document.addEventListener("click",function(event){
     
     let divFocus = event.target.id.split("_")[1]
     if(!isNaN(divFocus)){
-        divFocus < index? previousSimulation(moveAmout + 187.9) :nextSimulation(moveAmout + 187.9)
+        divFocus < index? previousSimulation(window.screen.width * 0.6107) :nextSimulation(window.screen.width * 0.6107)
     }
 })
