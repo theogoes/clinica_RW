@@ -256,15 +256,6 @@ body{
         font-weight: bold;
     }
 }
-#simulacao_carroceul{
-    height: 80%;
-}
-.item_carroceul{
-    width: 60%;
-    height: 80%;
-    background-color: #EEE3F1;
-}
-
 
 
 @keyframes fadein{

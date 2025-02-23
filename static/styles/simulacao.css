@@ -1,0 +1,119 @@
+:root {
+  --backgroud-dark: #9f4fa6;
+  --backgrould-clear: #eee3f1;
+}
+
+.slider {
+  height: 90vh;
+  position: relative;
+
+  background-color: var(--backgrould-clear);
+}
+
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.slider .list .item .content {
+  display: inline-flex;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 80%;
+  z-index: 1;
+}
+
+.slider .list .item .content .collumn_1,
+.slider .list .item .content .collumn_2 {
+  width: 50%;
+  height: 50%;
+}
+
+.slider .list .item .content p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.slider .list .item .content h2 {
+  font-size: 100px;
+  margin: 0;
+}
+.slider .list .item .content h2:nth-child(1) {
+  font-size: 50px;
+  margin: 0;
+}
+
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  pad: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .list .thumbnail .item {
+  position: relative;
+  width: 150px;
+  height: 220px;
+  transition: 0.5s;
+  opacity: 1;
+  display: inline-flex;
+
+  flex-shrink: 0;
+  border: var(--backgroud-dark) solid 1px;
+  border-radius: 10px;
+}
+
+.slider .list .thumbnail .item:hover {
+  cursor: pointer;
+}
+
+.slider .list .thumbnail .item.active {
+  background-color: var(--backgroud-dark);
+  color: var(--backgrould-clear);
+}
+
+.slider .list .thumbnail .item .content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.slider .list .thumbnail .item .content p:nth-child(1) {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.slider .list .thumbnail .item .content p:nth-child(2) {
+  font-size: 130%;
+  padding-bottom: 80%;
+}
+
+.slider .list .thumbnail .item .content p:nth-child(3) {
+  font-size: 130%;
+}
+
+@media screen and (max-width: 678px) {
+  .thumbnail {
+    justify-content: start;
+  }
+  .slider .list .item .content h2 {
+    font-size: 60px;
+    margin: 0;
+  }
+}

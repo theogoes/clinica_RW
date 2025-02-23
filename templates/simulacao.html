@@ -1,25 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
-    <script src="{{url_for('static',filename='js/simulacao.js')}}" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/simulacao.css') }}"
+    />
+    <script
+      src="{{url_for('static',filename='js/simulacao.js')}}"
+      defer
+    ></script>
     <title>Simulação</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="simulacao_main" class="container f">
-        <div id="s_cabecalho" class="w">
-            <div class="opt_container select f center">
-                <p>Simular</p>
-            </div>
-            <div class="opt_container f center">
-                <p>Locações</p>
-            </div>
+      <div id="s_cabecalho" class="w">
+        <div class="opt_container select f center">
+          <p>Simular</p>
         </div>
-        <div id="s_content" class="w f center">
-            
+        <div class="opt_container f center">
+          <p>Locações</p>
         </div>
+      </div>
+      <div class="slider">
+        <div class="list">
+          <div id="sim_0" class="item active">
+            <div class="content">
+              <div class="collumn_1">
+                <p>Locataria 1</p>
+                <h2>valor</h2>
+                <p>qtd sala, bairro</p>
+                <p>link</p>
+              </div>
+              <div class="collumn_2">
+                <h2>Simular</h2>
+              </div>
+            </div>
+          </div>
+          <div id="sim_1" class="item">
+            <div class="content">
+              <div class="collumn_1">
+                <p>Locataria 2</p>
+                <h2>valor</h2>
+                <p>qtd sala, bairro</p>
+                <p>link</p>
+              </div>
+              <div class="collumn_2">
+                <h2>Simular</h2>
+              </div>
+            </div>
+          </div>
+          <div id="sim_2" class="item">
+            <div class="content">
+              <div class="collumn_1">
+                <p>Locataria 3</p>
+                <h2>valor</h2>
+                <p>qtd sala, bairro</p>
+                <p>link</p>
+              </div>
+              <div class="collumn_2">
+                <h2>Simular</h2>
+              </div>
+            </div>
+          </div>
+          <div id="sim_3" class="item">
+            <div class="content">
+              <div class="collumn_1">
+                <p>Locataria</p>
+                <h2>valor</h2>
+                <p>qtd sala, bairro</p>
+                <p>link</p>
+              </div>
+              <div class="collumn_2">
+                <h2>Simular</h2>
+              </div>
+            </div>
+          </div>
+          <div id="sim_4" class="item">
+            <div class="content">
+              <div class="collumn_1">
+                <p>Locataria</p>
+                <h2>valor</h2>
+                <p>qtd sala, bairro</p>
+                <p>link</p>
+              </div>
+              <div class="collumn_2">
+                <h2>Simular</h2>
+              </div>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div id="sim_0" class="item active">
+              <div class="content">
+                <p>imobiliaria</p>
+                <p>valor</p>
+                <p>selecionar</p>
+              </div>
+            </div>
+            <div id="sim_1" class="item">
+              <div class="content">
+                <p>imobiliaria</p>
+                <p>valor</p>
+                <p>selecionar</p>
+              </div>
+            </div>
+            <div id="sim_2" class="item">
+              <div class="content">
+                <p>imobiliaria</p>
+                <p>valor</p>
+                <p>selecionar</p>
+              </div>
+            </div>
+            <div id="sim_3" class="item">
+              <div class="content">
+                <p>imobiliaria</p>
+                <p>valor</p>
+                <p>selecionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
